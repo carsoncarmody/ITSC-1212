@@ -1,0 +1,79 @@
+# Problem 1
+# Write an program that accepts three numbers and prints their sum
+
+print("Type three numbers and press enter after each number is entered.")
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+d=(a+b+c)
+
+print(d)
+
+# BREAK
+
+# Problem 2
+# Write a program that accepts am integer value 
+# and prints its previous and next numbers
+# separated by a comma.
+ 
+print("Type a number.")
+
+a = int(input())
+print(a-1,a,a+1)
+
+# BREAK
+
+# Problem 3
+# Write a program that reads the length of the base and the height
+# of right-angled triangle and prints the area. 
+# The area of a right angled-triangle is  1/2 x base x height 
+
+print("Enter the base of your triangle, then the height.")
+a=int(input())
+b=int(input())
+c=(0.5 * a * b)
+print(c)
+
+# BREAK
+
+# Problem 4
+# Write a program that accepts three values that represent 
+# cost of order, tip percentage, and tax percentage and calculates 
+# and displays the final purchase cost/price
+
+print("Enter the cost of order.")
+coo=float(input())
+print("Enter the tip percentage.")
+tipp=float(input())
+print("Enter the tax percentage.")
+taxp=float(input())
+
+tot=(coo * tipp)
+rtot=(coo * taxp)
+
+rltot=(coo+tot+rtot)
+print((rltot), "is your total.")
+
+# BREAK
+
+# Given two integer numbers, one is the number of teachers and the 
+other is the number of apples. We want to distribute the apples 
+venly among them. The remaining (the indivisible) part remans 
+in the basket. Write an algorithm using pseudocode that 
+would display the number of apples each single 
+teacher gets and the number of apples 
+remaining in the basket. Translate 
+your algorithm to Python code. 
+
+
+print("Input number of teachers.")
+teacher=int(input())
+print("Input number of apples.")
+apple=int(input())
+
+a = (apple // teacher)
+b = (apple % teacher)
+
+print("A teacher gets", int(a), "apples, leaving",int(b))
