@@ -1,0 +1,151 @@
+Write a program that asks the user for an integer and prints "odd" if it's odd and prints "even" otherwise. Complete this problem in lab6_p1.py.
+
+Write a program that asks the user for a number and prints 1 if it's positive, -1 if it's negative, or 0 if it's equal to zero.  Complete this problem in lab6_p2.py.
+
+Write a program that asks the user for an integer, representing someone's age. If the age is 18 or larger, print out “You can vote”. If the age is between 0 and 17 inclusive, print out “Too young to vote”. If the age is less than 0, print out “You are a time traveler!”.  Complete this problem in lab6_p3.py.
+
+Write a program that asks the user for a number (integer) between 1-4 and displays a different message depending on the number entered.  Complete this problem in lab6_p4.py.
+
+Write a program that asks the user for two strings, if they are equal print “ Passwords match. User logged in.” if the passwords don’t match print “Passwords don’t match. Try again!”.  Complete this problem in lab6_p5.py.
+
+Write a program that asks the user for a word or phrase, determine if it starts with a vowel (aeiou) or not. The program should print an appropriate message to inform the user (e.g. You entered "It is a lovely day" which starts with vowel).  Complete this problem in lab6_p6.py. Your program should work for upper and lower case letters.
+
+In lab6_p7.py we have two integer numbers a and z, where a <= z print all the odd numbers from a to z inclusive.
+
+In lab6_p8.py the program asks the user to input two numbers, the amount of hours worked in a week and the number for hourly wages. Complete the program to determine the final pay amount for that week. The company pays overtime so any hours worked over 40 hours in a week are paid 1.5 the regular hourly wage.
+
+In lab6_p9.py your are given a list that contains some words. Complete the program to to determine if a word entered by the user  exists in the list. Print an appropriate message to inform the user.
+
+In lab6_p10 you are given a list of numbers. Complete the program to find and print all its elements with even indices (i.e. A[0], A[2], A[4], ...).
+
+lab6_p11.py has a list of numbers and a number, complete the program to find and print the sum of the list elements that the given number is a factor of. For example, 4 is a factor of 32.
+
+In lab6_p12.py two lists are defined, one contains the names of guests invited to a party and the other has the number of guests they will be bringing. The two lists are ordered so related information is in the same index in both lists.  The party organizers want to know the guests that will be bringing more than one additional guest. Complete the program to print the names of guests that will be bringing more than 1 additional guests.
+
+# BREAK
+
+value = int(input("Enter a number: "))
+
+if value % 2 == 0:
+    print(value, "is even")
+else:
+    print(value, "is odd")
+
+# BREAK
+
+value = int(input("Enter a number: "))
+
+if value >= 1:
+    print("1")
+elif value == 0:
+    print("0")
+elif value <= -1:
+    print("-1")
+
+# BREAK
+
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You can vote")
+elif age in range(0,18):
+    print("Too young to vote")
+elif age < 0:
+    print("You are a time traveler!")
+
+# BREAK
+
+value = int(input("Enter a number between 1 and 4: "))
+
+if value == 1:
+    print("You chose 1. Nice.")
+elif value == 2:
+    print("You chose 2. Nice.")
+elif value == 3:
+    print("You chose 3. Nice.")
+elif value == 4:
+    print("You chose 4. Nice.")
+else:
+    print("You didn't follow my instructions, fool.")
+
+# BREAK
+
+pas = str(input("Enter your password: "))
+cpas = str(input("Enter your password again: "))
+
+if pas == cpas:
+    print("Passwords match. User logged in.")
+else:
+    print("Passwords don't match. Try again!")
+
+# BREAK
+
+ch = str(input("Enter a word or phrase: "))
+vow = "AaEeIiOoUu"
+
+if ch[0] in vow:
+    print("You entered", ch, "which does start with a vowel.")
+else:
+    print("You entered", ch, "which does not start with a vowel.")
+
+# BREAK
+
+a = 6
+z = 26
+
+for ch in range(6,27):
+    if ch % 2 != 0:
+        print(ch)
+
+# BREAK
+
+work_hours = float(input("Enter the number of hours worked this week: ") )
+hourly_wage = float(input("Enter your hourly rate: ") )
+
+sum = work_hours * hourly_wage
+
+if work_hours > 40:
+    ot = sum * 1.50
+    print(ot)
+else:
+    print(sum)
+
+# BREAK
+
+words = ["apple", "banana", "chocolate", "elephant", "giraffe", "hamburger","kangaroo", "lemon", "octopus",  "penguin", "panda", "strawberry","tiger", "umbrella", "watermelon"]
+
+word = input("Enter a word to search for: ")
+
+if word in words:
+    print("Your word was in the list!")
+else:
+    print("Your word was not in the list.")
+
+# BREAK
+
+numbers = [39, 72, 16, 89, 4, 57, 61, 98, 27, 12, 33, 68, 6, 55, 91]
+
+for ch in numbers:
+    if ch % 2 == 0: 
+        print(ch)
+
+# BREAK
+
+numbers = [39, 72, 16, 89, 4, 57, 61, 98, 27, 12, 33, 68, 6, 55, 91]
+target_number = 4
+n = 0
+for ch in numbers:
+    if ch % target_number == 0:
+        print(ch)
+        n=n+ch
+print(n)
+
+# BREAK
+
+guest_names = ['Grace Hopper', 'Richard Tapia','Timnit Gebru','Radia Perlman', 'Ada Lovelace','Ruzena Bajcsy']
+
+number_of_guests = [2,3,1,4,2,1]
+
+for ch in range(len(number_of_guests)):
+    if number_of_guests[ch] > 1:
+        print(guest_names[ch])  
