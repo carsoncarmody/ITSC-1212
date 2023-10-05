@@ -1,0 +1,58 @@
+Consider the code in lab03_p2.py. We want the user to enter the age of their dog and we want to write a program that will output the age of the dog in human years. The rule you want your program to follow is that 1 dog year is 7 human years. We wrote some code for you, but it has some errors. Fix the code to give you the expected result every time, with any number the user specifies.
+For example, if my dog is 7 years old, I expect to see the following output: Your dog’s age is equivalent to 49 human years.
+
+Consider the code in lab03_p3.py, that takes two numbers and calculates the average. Before running it try to do it on a paper and use a calculator. What is the average of two numbers like: 7 and 9? Now, run the program with these numbers. Do you get the result you expected? Obviously, your result is wrong, but Python is not complaining at all! This is because a logical or semantic mistake has been made. There is nothing wrong with the syntax, but your calculation is wrong. Fix the code to give you the expected result every time, with any pair of numbers the user specifies.
+
+In lab03_p4.py you are given another problematic code that runs but doesn’t give the expected result. The code should prompt the user for two numbers, calculate and display their sum. Explain what changes need to be made to make this code behave as expected and make those changes.
+
+In lab03_p5.py we want to use the random module to generate a random number between 1 and 1212 (inclusive). We want to do so by importing the  random module using an alias called rand and using the randrange function. The code given has several problems. Identify the problems and what changes need to be made to make this code behave as expected. Fix the code to achieve the desired result.
+
+In the prepwork you were introduced to the random  module. Another useful Python module is the  math module. It has several implementations of the most common math functions that might be needed for some computational solutions. This page is the official  math moduleLinks to an external site. documentation. Programmers refer to the documentation to help them understand how they can incorporate these existing solutions into their own solutions.  Start by reviewing the documentation page for the mathLinks to an external site. module and make a note of some of the functions listed on that page. For this problem we want to use the ceil, pow and sqrt functions. Your task is to design and implement a program in lab03_p6.py that asks the user to enter a real number and prints the result of the square root of that number cubed rounded up to the nearest integer.
+
+# BREAK
+
+dog_year = int(input("Please provide your dog's age:"))
+
+to_human = dog_year * 7
+
+print("Your dog's age is equivalent to", to_human ,"human years.")
+
+# BREAK
+
+x = int(input('Enter a number: '))
+
+y = int(input('Enter a number: '))
+
+z = (x+y)/2
+
+print('The average of the two numbers you have entered is:',z)
+
+# BREAK
+
+num_one = int(input('Enter a number: '))
+
+num_two = int(input('Enter a number: '))
+
+num_sum = num_one + num_two
+
+print("The sum of the two numbers you have entered is:",num_sum)
+
+# BREAK
+
+import random
+
+r = random.randrange(0, 1212)
+
+print(r)
+
+# BREAK
+
+import math
+import random
+
+number = int(input("Enter a real number."))
+number = math.sqrt(number)
+number = math.pow(number,3)
+number = math.ceil(number)
+
+print(number)
