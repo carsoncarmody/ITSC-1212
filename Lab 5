@@ -1,0 +1,77 @@
+In lab5_p1.py you are given a program that is supposed to multiply all the elements in the list ‘numbers’. However, the code has multiple problems and doesn’t produce the right result. Fix all the errors to get the desired result. The program should produce a single output: 24.
+
+ 
+
+In lab5_p2.py there are two variables a and b that hold integer numbers where a <=z. Using loops print the following:
+
+all the numbers from a to z inclusive.
+
+the sum of the numbers from a to z inclusive.
+
+Verify that your program works by changing the values of a and z.
+
+In mathematics, the factorial of an integer n, denoted by n! is the following product:
+
+                      n! = 1 × 2 × … × n
+
+In lab5_p3.py implement a program that asks the user for a real positive integer number n and calculates and displays the value n!.
+
+Don't use math module in this exercise. Verify your program works by testing it using different values for n.
+
+ 
+
+In lab5_p4.py you are given a list of Strings. Write a program that prints the total number of characters across all the elements of the list. Verify your program works by adding your name to the list to see if the output increases by the number of characters in your name. Note that there are 75 characters across all the strings in the given list.
+
+ 
+
+In lab5_p5.py you are given two lists, one contains the names of guests invited to a party and the other has the number of guests they will be bringing. The two lists are ordered so related information is in the same index in both lists. Complete the program so that for each guest it prints their name and the number of their guests.
+
+# BREAK
+
+numbers = [1, 2, 3, 4]
+
+mult = 1
+for n in numbers:
+    mult = mult * n
+print(mult) # 24 should be printed
+
+# BREAK 
+
+a = 7
+z = 15
+
+for n in range(7,16):
+    print(n)
+for n in range(7,16):
+    z = z + n
+print(z)
+
+# BREAK
+
+rn = int(input("Enter a real number: "))
+az = 1
+
+for n in range(1,rn+1):
+    az = n * az
+print(az)
+
+# BREAK 
+
+names = ['Grace Hopper', 'Richard Tapia','Timnit Gebru','Radia Perlman', 'Ada Lovelace','Ruzena Bajcsy']
+
+total = 0
+for i in names:
+    total = total + len(i)
+print(total)
+
+# BREAK 
+
+guest_names = ['Grace Hopper', 'Richard Tapia','Timnit Gebru','Radia Perlman', 'Ada Lovelace','Ruzena Bajcsy']
+
+number_of_guests = [2,3,1,2,2,1]
+
+so = 0
+
+for l in guest_names:
+    print(l,"has", number_of_guests[so], "guests.")
+    so = so +1
